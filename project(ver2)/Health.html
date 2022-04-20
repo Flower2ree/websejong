@@ -1,0 +1,448 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\Healthstyle.css">
+    <script>
+       
+        const add_textbox = () => {
+            const box = document.getElementById("box");
+            const newP = document.createElement('p');
+            const input = document.getElementById("name" + i + "");
+
+            if (input.value != '1213415') {
+                newP.innerHTML = "" + i + "." + input.value + "<input type='button' value='삭제' onclick='remove(this)'>";
+
+                box.appendChild(newP);
+                ++i;
+            }
+           
+                
+            
+        }
+        const remove = (obj) => {
+
+           
+                document.getElementById('box').removeChild(obj.parentNode);
+                --i;
+           
+        }
+
+
+    </script>
+   
+    <title>Health Page</title>
+
+</head>
+<body>
+
+    <h1><em> Hello, Guest! </em></h1>
+    <h2> Health <a href="Main.html"><img class="side" src="img\gohome.png" width="50" height="50"></a></h2>
+    <div class="user">
+        <div class="calendar">
+            <div class="header">
+                <div class="year-month"></div>
+                <div class="nav">
+                    <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                    <button class="nav-btn go-today" onclick="goToday()">Today</button>
+                    <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="days">
+                    <div class="day">일</div>
+                    <div class="day">월</div>
+                    <div class="day">화</div>
+                    <div class="day">수</div>
+                    <div class="day">목</div>
+                    <div class="day">금</div>
+                    <div class="day">토</div>
+                </div>
+                <div class="dates"></div>
+            </div>
+            <div class="container">
+                <div class="title">운동 일정</div>
+                <form>
+                    <div id="box">
+                        
+                    </div>
+                </form>
+                <div class="list-container">
+                    <ul id="planlist">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="helper">
+            <div role="navigation" class="navbox" aria-labelledby="웨이트_트레이닝" style="padding:3px">
+                <table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="color:inherit">
+                    <tbody>
+                        <tr>
+                            <th scope="col" class="navbox-title" colspan="3">
+                                <div id="웨이트_트레이닝" style="font-size:114%;margin:0 4em">
+                                    <a href="https://ko.wikipedia.org/wiki/%EC%9B%A8%EC%9D%B4%ED%8A%B8_%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D" title="웨이트 트레이닝">웨이트 트레이닝</a>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:15%">3대 운동</th>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EB%B2%A4%EC%B9%98_%ED%94%84%EB%A0%88%EC%8A%A4" title="벤치 프레스">벤치 프레스</a></li>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EC%8A%A4%EC%BF%BC%ED%8A%B8" title="스쿼트">스쿼트</a></li>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EB%8D%B0%EB%93%9C%EB%A6%AC%ED%94%84%ED%8A%B8" title="데드리프트">데드리프트</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:15%">목</th>
+                            <td class="navbox-list navbox-even hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="/w/index.php?title=%EB%A0%88%EC%8A%AC%EB%9F%AC_%EB%B8%8C%EB%A6%AC%EC%A7%80&amp;action=edit&amp;redlink=1" class="new" title="레슬러 브리지 (없는 문서)">레슬러 브리지</a></li>
+                                        <li><a href="/w/index.php?title=%EB%84%A5_%ED%94%8C%EB%A0%89%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="넥 플렉션 (없는 문서)">넥 플렉션(neck flexion)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%82%AC%EC%9D%B4%EB%93%9C_%EB%84%A5_%ED%94%8C%EB%A0%89%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="사이드 넥 플렉션 (없는 문서)">사이드 넥 플렉션(side neck flexion))</a></li>
+                                        <li><a href="/w/index.php?title=%EB%84%A5_%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="넥 익스텐션 (없는 문서)">넥 익스텐션(neck extension)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:15%">어깨</th>
+                            <td class="navbox-list navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="/w/index.php?title=%EC%88%84%EB%8D%94_%ED%94%84%EB%A0%88%EC%8A%A4&amp;action=edit&amp;redlink=1" class="new" title="숄더 프레스 (없는 문서)">숄더 프레스(shoulder press)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%97%85_%EB%9D%BC%EC%9D%B4%ED%8A%B8_%EB%A1%9C%EC%9A%B0&amp;action=edit&amp;redlink=1" class="new" title="업 라이트 로우 (없는 문서)">업 라이트 로우(upright row)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A6%AC%EC%96%B4%EB%8D%B8%ED%8A%B8_%EB%A1%9C%EC%9A%B0&amp;action=edit&amp;redlink=1" class="new" title="리어델트 로우 (없는 문서)">리어델트 로우(reardelt row)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%82%AC%EC%9D%B4%EB%93%9C_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="사이드 레이즈 (없는 문서)">사이드 레이즈(side raise)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%94%84%EB%A1%A0%ED%8A%B8_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="프론트 레이즈 (없는 문서)">프론트 레이즈(front raise)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A6%AC%EC%96%B4_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="리어 레이즈 (없는 문서)">리어 레이즈(rear raise)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%88%84%EB%8D%94_%EC%8A%88%EB%9F%AC%EA%B7%B8&amp;action=edit&amp;redlink=1" class="new" title="숄더 슈러그 (없는 문서)">숄더 슈러그(Shoulder shrug)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">가슴</th>
+                            <td class="navbox-list navbox-even hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EB%B2%A4%EC%B9%98_%ED%94%84%EB%A0%88%EC%8A%A4" title="벤치 프레스">벤치 프레스</a></li>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%ED%8C%94%EA%B5%BD%ED%98%80%ED%8E%B4%EA%B8%B0" title="팔굽혀펴기">팔굽혀펴기(Push-up)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%B2%B4%EC%8A%A4%ED%8A%B8_%ED%94%84%EB%A0%88%EC%8A%A4&amp;action=edit&amp;redlink=1" class="new" title="체스트 프레스 (없는 문서)">체스트 프레스(chest press)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%94%8C%EB%A1%9C%EC%96%B4_%ED%94%84%EB%A0%88%EC%8A%A4(floor_press)&amp;action=edit&amp;redlink=1" class="new" title="플로어 프레스(floor press) (없는 문서)">플로어 프레스(floor press)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%8D%A4%EB%B2%A8_%ED%94%8C%EB%9D%BC%EC%9D%B4&amp;action=edit&amp;redlink=1" class="new" title="덤벨 플라이 (없는 문서)">덤벨 플라이(dumbbell fly)</a></li>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EB%B2%84%ED%84%B0%ED%94%8C%EB%9D%BC%EC%9D%B4" class="mw-disambig" title="버터플라이">버터플라이(butterfly)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%BC%80%EC%9D%B4%EB%B8%94_%ED%81%AC%EB%A1%9C%EC%8A%A4%EC%98%A4%EB%B2%84&amp;action=edit&amp;redlink=1" class="new" title="케이블 크로스오버 (없는 문서)">케이블 크로스오버(cable crossover)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%94%A5%EC%8A%A4&amp;action=edit&amp;redlink=1" class="new" title="딥스 (없는 문서)">딥스(dips)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">위 등</th>
+                            <td class="navbox-list navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a class="mw-selflink selflink">턱걸이</a></li>
+                                        <li><a href="/w/index.php?title=%EB%9E%8F_%ED%92%80_%EB%8B%A4%EC%9A%B4&amp;action=edit&amp;redlink=1" class="new" title="랏 풀 다운 (없는 문서)">랏 풀 다운(lat pull down)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%B2%A4%ED%8A%B8_%EC%98%A4%EB%B2%84_%EB%A1%9C%EC%9E%89&amp;action=edit&amp;redlink=1" class="new" title="벤트 오버 로잉 (없는 문서)">벤트 오버 로잉(bent over rowing)</a></li>
+                                        <li><a href="/w/index.php?title=T%EB%B0%94_%EB%A1%9C%EC%9E%89&amp;action=edit&amp;redlink=1" class="new" title="T바 로잉 (없는 문서)"> T 바 로잉(T-bar rowing)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%9B%90_%ED%95%B8%EB%93%9C_%EB%A1%9C%EC%9E%89&amp;action=edit&amp;redlink=1" class="new" title="원 핸드 로잉 (없는 문서)">원 핸드 로잉(one hand rowing)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%8B%9C%ED%8B%B0%EB%93%9C_%EB%A1%9C%EC%9E%89&amp;action=edit&amp;redlink=1" class="new" title="시티드 로잉 (없는 문서)">시티드 로잉(seated rowing)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%92%80_%EC%98%A4%EB%B2%84&amp;action=edit&amp;redlink=1" class="new" title="풀 오버 (없는 문서)">풀 오버(pull over)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">아래 등</th>
+                            <td class="navbox-list navbox-even hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EB%8D%B0%EB%93%9C%EB%A6%AC%ED%94%84%ED%8A%B8" title="데드리프트">데드리프트(Deadlift)</a></li>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EB%B0%B1_%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98" title="백 익스텐션">백 익스텐션(back extension)</a></li>
+                                        <li><a href="/w/index.php?title=%EA%B5%BF_%EB%AA%A8%EB%8B%9D_%EC%97%91%EC%84%9C%EC%82%AC%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="굿 모닝 엑서사이즈 (없는 문서)">굿 모닝 엑서사이즈(good morning exercise)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%B0%B1_%EC%97%91%EC%84%9C%EC%82%AC%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="백 엑서사이즈 (없는 문서)">백 엑서사이즈(back exercise)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%9D%BC%EC%9E%89_%EB%B0%B1_%EC%95%84%EC%B9%98&amp;action=edit&amp;redlink=1" class="new" title="라잉 백 아치 (없는 문서)">라잉 백 아치(lying back arch)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A6%AC%EB%B2%84%EC%8A%A4_%EB%B0%B1_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="리버스 백 레이즈 (없는 문서)">리버스 백 레이즈(reverse back raise)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%8D%A4%EB%B2%A8_%EC%9C%88%EB%93%9C%EB%B0%80&amp;action=edit&amp;redlink=1" class="new" title="덤벨 윈드밀 (없는 문서)">덤벨 윈드밀(dumbbell windmill)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">위팔</th>
+                            <td class="navbox-list navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%83%A0%EB%94%A9_%EC%BB%AC" title="스탠딩 컬">스탠딩 컬(standing curl)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%8B%9C%ED%8B%B0%EB%93%9C_%EC%BB%AC&amp;action=edit&amp;redlink=1" class="new" title="시티드 컬 (없는 문서)">시티드 컬(seated curl)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%94%84%EB%A6%AC%EC%B2%98_%EC%BB%AC&amp;action=edit&amp;redlink=1" class="new" title="프리처 컬 (없는 문서)">프리처 컬(preacher curl)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%9D%B8%ED%81%B4%EB%9D%BC%EC%9D%B8_%EC%BB%AC&amp;action=edit&amp;redlink=1" class="new" title="인클라인 컬 (없는 문서)">인클라인 컬(incline curl)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%95%B4%EB%A8%B8_%EC%BB%AC&amp;action=edit&amp;redlink=1" class="new" title="해머 컬 (없는 문서)">해머 컬(hammer curl)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A6%AC%EB%B2%84%EC%8A%A4_%EC%BB%AC&amp;action=edit&amp;redlink=1" class="new" title="리버스 컬 (없는 문서)">리버스 컬(reverse curl)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%94%A5%EC%8A%A4&amp;action=edit&amp;redlink=1" class="new" title="딥스 (없는 문서)">딥스(dips)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A6%AC%EB%B2%84%EC%8A%A4_%ED%91%B8%EC%89%AC_%EC%97%85&amp;action=edit&amp;redlink=1" class="new" title="리버스 푸쉬 업 (없는 문서)">리버스 푸쉬 업(reverse push up)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%82%B4%EB%A1%9C%EC%9A%B0_%EA%B7%B8%EB%A6%BD_%EB%B2%A4%EC%B9%98_%ED%94%84%EB%A0%88%EC%8A%A4&amp;action=edit&amp;redlink=1" class="new" title="내로우 그립 벤치 프레스 (없는 문서)">내로우 그립 벤치 프레스(narrow grip bench press)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%8A%A4%ED%83%A0%EB%94%A9_%ED%8A%B8%EB%A6%AC%EC%85%89%EC%8A%A4_%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="스탠딩 트리셉스 익스텐션 (없는 문서)">스탠딩 트리셉스 익스텐션(standing triceps extension)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%8B%9C%ED%8B%B0%EB%93%9C_%ED%8A%B8%EB%A6%AC%EC%85%89%EC%8A%A4_%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="시티드 트리셉스 익스텐션 (없는 문서)">시티드 트리셉스 익스텐션(seated triceps extension)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%9D%BC%EC%9E%89_%ED%8A%B8%EB%A6%AC%EC%85%89%EC%8A%A4_%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="라잉 트리셉스 익스텐션 (없는 문서)">라잉 트리셉스 익스텐션(lying triceps extension)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%9D%B8%ED%81%B4%EB%9D%BC%EC%9D%B8_%ED%8A%B8%EB%A6%AC%EC%85%89%EC%8A%A4_%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="인클라인 트리셉스 익스텐션 (없는 문서)">인클라인 트리셉스 익스텐션(incline triceps extension)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%94%94%ED%81%B4%EB%9D%BC%EC%9D%B8_%ED%8A%B8%EB%A6%AC%EC%85%89%EC%8A%A4_%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="디클라인 트리셉스 익스텐션 (없는 문서)">디클라인 트리셉스 익스텐션(decline triceps extension)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%8A%B8%EB%A6%AC%EC%85%89%EC%8A%A4_%ED%94%84%EB%A0%88%EC%8A%A4_%EB%8B%A4%EC%9A%B4&amp;action=edit&amp;redlink=1" class="new" title="트리셉스 프레스 다운 (없는 문서)">트리셉스 프레스 다운(triceps press down)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%8A%B8%EB%A6%AC%EC%85%89%EC%8A%A4_%ED%82%A5%EB%B0%B1&amp;action=edit&amp;redlink=1" class="new" title="트리셉스 킥백 (없는 문서)">트리셉스 킥백(triceps kickback)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">아래팔</th>
+                            <td class="navbox-list navbox-even hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="/w/index.php?title=%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EC%BB%AC&amp;action=edit&amp;redlink=1" class="new" title="리스트 컬 (없는 문서)">리스트 컬(wrist curl)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A6%AC%EB%B2%84%EC%8A%A4_%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EC%BB%AC&amp;action=edit&amp;redlink=1" class="new" title="리버스 리스트 컬 (없는 문서)">리버스 리스트 컬(reverse wrist curl)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%BD%A4%EB%B9%84%EB%84%A4%EC%9D%B4%EC%85%98_%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EC%BB%AC&amp;action=edit&amp;redlink=1" class="new" title="콤비네이션 리스트 컬 (없는 문서)">콤비네이션 리스트 컬(combination wrist curl)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EB%A1%A4%EB%9F%AC&amp;action=edit&amp;redlink=1" class="new" title="리스트 롤러 (없는 문서)">리스트 롤러(wrist roller)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%94%84%EB%A1%9C%EB%84%A4%EC%9D%B4%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="프로네이션 (없는 문서)">프로네이션(pronation)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%8A%A4%ED%94%BC%EB%84%A4%EC%9D%B4%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="스피네이션 (없는 문서)">스피네이션(spination)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%96%BC%EB%84%88_%ED%94%8C%EB%A0%89%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="얼너 플렉션 (없는 문서)">얼너 플렉션(ulnar flexion)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A0%88%EC%9D%B4%EB%94%94%EC%96%BC_%ED%94%8C%EB%A0%89%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="레이디얼 플렉션 (없는 문서)">레이디얼 플렉션(radial flexion)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%9B%90_%ED%95%B8%EB%93%9C_%EB%8D%B0%EB%93%9C_%EB%A6%AC%ED%94%84%ED%8A%B8&amp;action=edit&amp;redlink=1" class="new" title="원 핸드 데드 리프트 (없는 문서)">원 핸드 데드 리프트(one hand dead lift)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%95%B8%EB%93%9C_%EA%B7%B8%EB%A6%AC%ED%8D%BC&amp;action=edit&amp;redlink=1" class="new" title="핸드 그리퍼 (없는 문서)">핸드 그리퍼(hand-gripper)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%95%80%EC%B9%98_%EA%B7%B8%EB%A6%BD&amp;action=edit&amp;redlink=1" class="new" title="핀치 그립 (없는 문서)">핀치 그립(pinch grip)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">복부</th>
+                            <td class="navbox-list navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EC%9C%97%EB%AA%B8%EC%9D%BC%EC%9C%BC%ED%82%A4%EA%B8%B0" class="mw-redirect" title="윗몸일으키기">윗몸일으키기(sit up)</a></li>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%ED%81%AC%EB%9F%B0%EC%B9%98_(%EC%9A%B4%EB%8F%99)" title="크런치 (운동)">크런치(Crunch)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A6%AC%EB%B2%84%EC%8A%A4_%ED%81%AC%EB%9F%B0%EC%B9%98&amp;action=edit&amp;redlink=1" class="new" title="리버스 크런치 (없는 문서)">리버스 크런치(reverse crunch)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A0%88%EA%B7%B8_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="레그 레이즈 (없는 문서)">레그 레이즈(leg raise)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%95%B1%EB%8B%A4%EB%A8%B8%EB%8A%98_%EB%A8%B8%EC%8B%A0&amp;action=edit&amp;redlink=1" class="new" title="앱다머늘 머신 (없는 문서)">앱다머늘 머신(abdominal machine)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%93%9C%EB%9E%98%EA%B3%A4_%ED%94%8C%EB%9E%98%EA%B7%B8&amp;action=edit&amp;redlink=1" class="new" title="드래곤 플래그 (없는 문서)">드래곤 플래그(dragon flag)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%97%85_%EB%A1%A4%EB%9F%AC&amp;action=edit&amp;redlink=1" class="new" title="업 롤러 (없는 문서)">업 롤러(up roller)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%97%85_%ED%8A%B8%EC%9C%84%EC%8A%A4%ED%8A%B8&amp;action=edit&amp;redlink=1" class="new" title="업 트위스트 (없는 문서)">업 트위스트(up twist)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%82%AC%EC%9D%B4%EB%93%9C_%EB%B0%B4%EB%93%9C&amp;action=edit&amp;redlink=1" class="new" title="사이드 밴드 (없는 문서)">사이드 밴드(side bend)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%9F%AC%EC%8B%9C%EC%95%88_%ED%8A%B8%EC%9C%84%EC%8A%A4%ED%8A%B8&amp;action=edit&amp;redlink=1" class="new" title="러시안 트위스트 (없는 문서)">러시안 트위스트(Russian twist)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">엉덩이</th>
+                            <td class="navbox-list navbox-even hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="/w/index.php?title=%ED%9E%99_%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98(hip_extension)&amp;action=edit&amp;redlink=1" class="new" title="힙 익스텐션(hip extension) (없는 문서)">힙 익스텐션(hip extension)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%9F%B0%EC%A7%80&amp;action=edit&amp;redlink=1" class="new" title="런지 (없는 문서)">런지(lunge)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%8A%A4%ED%83%AD_%EC%97%85&amp;action=edit&amp;redlink=1" class="new" title="스탭 업 (없는 문서)">스탭 업(step up)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%95%A0%EB%B8%8C%EB%8D%95%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="애브덕션 (없는 문서)">애브덕션(abduction)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">대퇴(허벅지)</th>
+                            <td class="navbox-list navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EC%8A%A4%EC%BF%BC%ED%8A%B8" title="스쿼트">스쿼트(squat)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A0%88%EA%B7%B8_%ED%94%84%EB%A0%88%EC%8A%A4(leg_press)&amp;action=edit&amp;redlink=1" class="new" title="레그 프레스(leg press) (없는 문서)">레그 프레스(leg press)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A0%88%EA%B7%B8_%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="레그 익스텐션 (없는 문서)">레그 익스텐션(leg extention)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A0%88%EA%B7%B8_%EC%BB%AC&amp;action=edit&amp;redlink=1" class="new" title="레그 컬 (없는 문서)">레그 컬(leg curl)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%96%B4%EB%8D%95%EC%85%98&amp;action=edit&amp;redlink=1" class="new" title="어덕션 (없는 문서)">어덕션(adduction)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">햄스트링</th>
+                            <td class="navbox-list navbox-even hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EB%8D%B0%EB%93%9C%EB%A6%AC%ED%94%84%ED%8A%B8" title="데드리프트">데드리프트(Deadlift)</a></li>
+                                        <li><a href="/w/index.php?title=%EA%B8%80%EB%A3%A8%ED%8A%B8_%ED%96%84_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="글루트 햄 레이즈 (없는 문서)">글루트 햄 레이즈(Glute-Ham Raise)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A0%88%EA%B7%B8_%EC%BB%AC&amp;action=edit&amp;redlink=1" class="new" title="레그 컬 (없는 문서)">레그 컬(leg curl)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">종아리</th>
+                            <td class="navbox-list navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="/w/index.php?title=%EC%8A%A4%ED%83%A0%EB%94%A9_%EC%B9%B4%ED%94%84_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="스탠딩 카프 레이즈 (없는 문서)">스텐딩 카프 레이즈(standing calf raise)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%8F%88%ED%82%A4_%EC%B9%B4%ED%94%84_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="돈키 카프 레이즈 (없는 문서)">돈키 카프 레이즈(donkey calf raise)</a></li>
+                                        <li><a href="/w/index.php?title=%EB%A6%AC%EB%B2%84%EC%8A%A4_%EC%B9%B4%ED%94%84_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="리버스 카프 레이즈 (없는 문서)">리버스 카프 레이즈(reverse calf raise)</a></li>
+                                        <li><a href="/w/index.php?title=%EC%8B%9C%ED%8B%B0%EB%93%9C_%EC%B9%B4%ED%94%84_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="시티드 카프 레이즈 (없는 문서)">시티드 카프 레이즈(seated calf raise)</a></li>
+                                        <li><a href="/w/index.php?title=%ED%86%A0%EC%9A%B0_%EB%A0%88%EC%9D%B4%EC%A6%88&amp;action=edit&amp;redlink=1" class="new" title="토우 레이즈 (없는 문서)">토우 레이즈(toe raise)</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="navbox-group" style="width:1%">훈련 방법</th>
+                            <td class="navbox-list navbox-even hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="/w/index.php?title=%EB%B6%84%ED%95%A0_%EC%9A%B4%EB%8F%99&amp;action=edit&amp;redlink=1" class="new" title="분할 운동 (없는 문서)">분할 운동</a></li>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EA%B3%A0%EA%B0%95%EB%8F%84_%ED%9B%88%EB%A0%A8" title="고강도 훈련">고강도 훈련</a></li>
+                                        <li><a href="https://ko.wikipedia.org/wiki/%EA%B7%BC%EB%A0%A5_%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D" title="근력 트레이닝">근력 트레이닝</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="navbox-
+                          navbox-odd hlist" style="text-align:left;padding:20px">
+                                <div style="padding:0em 0.25em">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=oWOKrTiQmWM" title="벤치 프레스">3대운동</a> <img src="img/3big.jpg" alt="Example"></li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="cal.js" charset="EUC-KR"></script>
+   
+    
+</body>
+</html>

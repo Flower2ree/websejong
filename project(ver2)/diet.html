@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Page</title>
+    <link rel="stylesheet" href="css\diet.css">
+</head>
+<body>
+    <h3><em>Hello, Guest! </em></h3>
+    <h2>Diet<a href="Main.html"><img class="side" src="img\gohome.png" width="50" height="50"></a></h2>
+    <div id="side_left">
+        <table> 
+            <tr class="1">
+                <th colspan="7">2022.04</td>
+            </tr>
+            <tr class="2">
+                <th style="color:red">Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thr</th>
+                <th>Fri</th>
+                <th style="color:blue">Sat</th>
+            </tr>
+            <tr class="3">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td style="color:blue">2</td>
+            </tr>
+            <tr>
+                <td style="color:red">3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td style="color:blue">9</td>
+            </tr>
+            <tr>
+                <td style="color:red">10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td style="color:blue">16</td>
+            </tr>
+            <tr>
+                <td style="color:red">17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td style="color:blue">23</td>
+            </tr>
+            <tr>
+                <td style="color:red">24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td style="color:blue">30</td>
+            </tr>
+        </table>
+        <form>
+            <div>
+                <p>Day:
+                    <select name="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+                <label for="calorie">Calorie:</label>
+                <input type="text" id="calorie" name="calorie" />
+            </div>
+            <div>
+                <p></p>
+                <input type="submit" id="register" value="Register" /> 
+            </div>
+        </form>
+    </div>
+    <div id="side_right">
+        <form>
+            <div id="form">
+                <span class="title">Gender</span>
+                <input type="radio" name="gender" id="male" value="male" />
+                <label for="male">male</label>
+                <input type="radio" name="gender" id="female" value="female" />
+                <label for="female">female</label>
+            </div>
+            <div id="form">
+                <label for="height" class="title">Height:</label>
+                <input type="text" id="height" name="height" />
+            </div>
+            <div id="form">
+                <label for="weight" class="title">Weight:</label>
+                <input type="text" id="weight" name="weight" />
+            </div>
+            <div id="form">
+                <label for="age" class="title">Age:</label>
+                <input type="text" id="age" name="age" />
+            </div>
+            <div id="form" class="submit">
+                <input type="submit" id="output" value="Output" />
+            </div>
+        </form>
+    </div>
+    <div id="side_right">
+        <p>chicken breast(100g) 164kcal</p>
+        <p>rice(100g) 143kcal</p>
+        <p>hamburger(100g) 294kcal</p>
+        <p>ramyun(100g) 400kcal</p>
+    </div>
+</body>
+</html>
